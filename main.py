@@ -10,7 +10,7 @@ model = pickle.load(open('Basic_Classifier.sav', 'rb'))
 model1 = pickle.load(open('High_Regression_Log_Life.sav', 'rb'))
 model2 = pickle.load(open('Low_Regression.sav', 'rb'))
 import csv
-BASE_DIR = "E:\\vinayakk"
+BASE_DIR = "C:\\Users\\Dell\\Battery life prediction"
 import os
 @app.route('/',methods=['GET'])
 def Home():
@@ -23,7 +23,7 @@ def predict():
     if request.method == 'POST':
 
         #with open("C:\\Users\\g\\Desktop\\test_file4.csv") as file:
-        with open("C:\\Users\\USERNAME\\PycharmProjects\\Application_GUI\\test_files\\test_file1.csv") as file:
+        with open("C:\\Users\\Dell\\Battery life prediction\\Application_GUI\\Application_GUI\\test_files\\test_file1.csv") as file:
             reader = csv.DictReader(file)
             resp = request.form
             for row in reader:
